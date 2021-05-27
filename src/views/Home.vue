@@ -1,5 +1,5 @@
 <template>
-  <div class="home">qaasdasd</div>
+  <div class="home">Home</div>
 </template>
 
 <script>
@@ -10,6 +10,5 @@ export default {
 
 <style scoped>
 .home {
-  font-family: 'Courier New', Courier, monospace;
 }
 </style>
