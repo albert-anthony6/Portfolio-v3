@@ -1,0 +1,71 @@
+$primary: #fed9ff;
+$secondary: #ffd79d;
+$primary-light: #c9cfc9;
+$primary-dark: #673be0;
+
+$bg-linear-1: #ffddb7;
+$bg-linear-2: #b4a5df;
+
+$bg-linear-3: #975add;
+$bg-linear-4: #3f00ee;
+
+$primary-alpha-50: #fed9ff50;
+
+$shadow-light: #fff;
+
+$poppins: 'Poppins', Avenir, Helvetica, Arial, sans-serif;
+$pattaya: 'Pattaya', Avenir, Helvetica, Arial, sans-serif;
+
+@mixin xxs {
+  @media (max-width: 374px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin sm-tab {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: 850px) {
+    @content;
+  }
+}
+
+@mixin mdh {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
