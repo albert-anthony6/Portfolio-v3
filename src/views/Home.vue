@@ -6,6 +6,15 @@
         <h1>Albert Valdes</h1>
         <h2>Frontend Web Developer</h2>
         <p><span>This is my portfolio</span>.</p>
+        <a href="mailto: valdesalbert21@gmail.com"
+          ><i class="fa fa-envelope"
+        /></a>
+        <a href="https://www.linkedin.com/in/avaldes21/" target="_blank"
+          ><i class="fa fa-linkedin"
+        /></a>
+        <a href="https://github.com/albert-anthony6" target="_blank"
+          ><i class="fa fa-github"
+        /></a>
       </div>
       <div class="hero-right">
         <p>Hire Albert?</p>
@@ -59,22 +68,38 @@ export default {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 7px;
     &::after {
       content: '';
       position: absolute;
       width: 100%;
       height: 100%;
       background-color: #00000081;
+      border-radius: 7px;
       z-index: 1;
     }
     .hero-left {
       text-align: left;
       margin-bottom: 10%;
       z-index: 2;
+      .fa-envelope,
+      .fa-linkedin,
+      .fa-github {
+        background-color: $primary;
+        font-size: 2.4rem;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .fa-linkedin,
+      .fa-github {
+        padding: 10px 12px;
+        margin-left: 5px;
+      }
       span {
         font-family: $pattaya;
         font-size: 3.5rem;
-        color: #0771fc;
+        color: $primary;
       }
       p,
       .hello,
