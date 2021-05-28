@@ -1,8 +1,8 @@
 $white: #fff;
-$black: #000;
+$black: #252525;
 
-// $poppins: 'Poppins', Avenir, Helvetica, Arial, sans-serif;
-// $pattaya: 'Pattaya', Avenir, Helvetica, Arial, sans-serif;
+$poppins: 'Poppins', Avenir, Helvetica, Arial, sans-serif;
+$pattaya: 'Pattaya', Avenir, Helvetica, Arial, sans-serif;
 
 @mixin xxs {
   @media (max-width: 374px) {

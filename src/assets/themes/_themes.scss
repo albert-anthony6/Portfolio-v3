@@ -13,9 +13,10 @@ body {
   overflow-x: hidden;
 }
 body {
-  color: $black;
+  font-family: 'Poppins', Avenir, Helvetica, Arial, sans-serif;
+  color: #fff;
   text-align: center;
-  padding: 70px;
+  padding: 50px;
   font-size: 1.6rem;
   min-height: 100vh;
 }
