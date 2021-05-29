@@ -29,12 +29,18 @@
         <img src="../assets/icons/alien_silhouette_v2.svg" alt="Alien." />
       </div>
     </div>
+    <HomeContent />
   </div>
 </template>
 
 <script>
+import HomeContent from '../components/HomeContent.vue';
+
 export default {
   name: 'Home',
+  components: {
+    HomeContent,
+  },
   methods: {
     moveEyes(event) {
       const x = `${(event.clientX * 100) / window.innerWidth}%`;
@@ -68,7 +74,7 @@ export default {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 7px;
+    overflow: hidden;
     &::after {
       content: '';
       position: absolute;
@@ -80,8 +86,12 @@ export default {
     }
     .hero-left {
       text-align: left;
-      margin-bottom: 10%;
+      margin: auto 0;
       z-index: 2;
+      @include mdh {
+        text-align: center;
+        z-index: 999;
+      }
       .fa-envelope,
       .fa-linkedin,
       .fa-github {
@@ -90,6 +100,7 @@ export default {
         padding: 10px;
         border-radius: 50%;
         cursor: pointer;
+        color: #fff;
       }
       .fa-linkedin,
       .fa-github {
@@ -105,21 +116,48 @@ export default {
       .hello,
       h2 {
         font-size: 5.2rem;
+        @include xxl {
+          font-size: 4rem;
+        }
       }
       h2 {
         font-weight: 300;
+        line-height: 1;
+        @include xl {
+          font-size: 3rem;
+        }
       }
       h1 {
         font-size: 7.2rem;
         margin-top: -20px;
         margin-bottom: -20px;
+        @include xxl {
+          font-size: 6rem;
+        }
+        @include xl {
+          font-size: 5rem;
+          margin-bottom: -12px;
+        }
       }
     }
     .hero-right {
       position: relative;
+      margin-bottom: 5%;
       z-index: 2;
+      @include mdh {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        margin-bottom: 0;
+      }
+      @include tab {
+        right: 50%;
+        transform: translateX(50%);
+        opacity: 0.7;
+        filter: contrast(80%);
+      }
       &:hover p {
-        padding: 20px;
+        padding: 5%;
         opacity: 1;
       }
       p {
@@ -127,7 +165,7 @@ export default {
         top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(255, 255, 255, 0.452);
+        background-color: #ffffff73;
         color: #000;
         padding: 0px;
         border-radius: 50%;
@@ -135,6 +173,9 @@ export default {
         opacity: 0;
         cursor: pointer;
         transition: all 0.4s ease;
+        @include mdh {
+          display: none;
+        }
         &:hover {
           background-color: #fff;
         }
@@ -142,13 +183,18 @@ export default {
       .eyes {
         display: flex;
         position: absolute;
-        top: 50%;
+        top: 48%;
         left: 50%;
+        width: 50%;
+        height: 6%;
         transform: translate(-50%, -50%);
+        @include mdh {
+          display: none;
+        }
         .eye {
           position: relative;
-          width: 60px;
-          height: 30px;
+          width: 100%;
+          height: 100%;
           background-color: #fff;
           display: inline-block;
           margin: 10px;
@@ -158,8 +204,8 @@ export default {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 15px;
-            height: 15px;
+            width: 27%;
+            height: 52%;
             background-color: #000;
             border-radius: 50%;
             border: 5px solid #333;
@@ -168,6 +214,9 @@ export default {
       }
       img {
         width: 35vmin;
+        @include tab {
+          width: 35vmax;
+        }
       }
     }
   }

@@ -44,10 +44,9 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: red;
+  background-color: transparent;
   width: 100%;
   height: 100%;
-  border-radius: 30px;
   clip-path: circle(100px at calc(100% - 86px) 74px);
   z-index: 999;
   #active {
@@ -55,20 +54,24 @@ export default {
   }
   #active:checked ~ .wrapper {
     clip-path: circle(75%);
-    // background-image: linear-gradient(to bottom right, $bg-linear-3, $bg-linear-4);
+    background-image: linear-gradient(
+      to bottom right,
+      $bg-linear-1,
+      $bg-linear-2
+    );
   }
   #active:not(:checked) ~ .wrapper .menu {
     opacity: 0;
   }
   #active:checked ~ .wrapper .menu-button {
-    // background-color: $secondary;
+    background-color: $white;
     .burger-icon {
       background-color: transparent;
       &::before,
       &::after {
         top: 0;
         width: 100%;
-        background-color: red;
+        background-color: $primary-dark;
       }
       &::before {
         transform: rotate(40deg);
@@ -82,7 +85,6 @@ export default {
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 30px;
     clip-path: circle(100px at calc(100% - 86px) 74px);
     transition: all 0.3s ease-in;
     z-index: 999;
@@ -93,7 +95,7 @@ export default {
       width: 65px;
       height: 65px;
       border-radius: 50%;
-      // background-color: $bg-linear-3;
+      background-color: $primary;
       cursor: pointer;
       &:hover {
         .burger-icon {
@@ -113,7 +115,7 @@ export default {
         height: 3px;
         margin-left: 0.5px;
         border-radius: 7px;
-        // background-color: $primary;
+        background-color: $white;
         transition: all 0.2s ease-in-out;
         &::before,
         &::after {
@@ -146,11 +148,11 @@ export default {
       a {
         font-size: 4.2rem;
         font-weight: 500;
-        // color: $secondary;
+        color: $white;
         border-bottom: 2px solid transparent;
         transition: all 0.3s ease;
         &:hover {
-          // border-bottom: 2px solid $primary;
+          border-bottom: 2px solid $white;
         }
       }
     }
