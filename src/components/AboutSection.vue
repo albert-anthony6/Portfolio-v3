@@ -1,5 +1,5 @@
 <template>
-  <div class="home-content">
+  <section class="about-section">
     <div class="left-content">
       <p class="about-me">About me</p>
       <p class="bio">
@@ -58,24 +58,23 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'HomeContent',
+  name: 'AboutSection',
 };
 </script>
 
 <style scoped lang="scss">
-.home-content {
+.about-section {
   position: relative;
   display: flex;
   justify-content: space-between;
   width: 75vw;
   height: 100%;
-  margin: 0 auto;
-  margin-top: -5%;
+  margin: -5% auto 150px auto;
   z-index: 3;
   box-shadow: 10px 5px 5px $primary-dark;
   background-color: $white;

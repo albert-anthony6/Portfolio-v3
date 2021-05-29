@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <main class="home">
     <div @mousemove="moveEyes" class="hero-section">
       <div class="hero-left">
         <p><span class="hello">Hello</span>, I'm</p>
@@ -29,17 +29,20 @@
         <img src="../assets/icons/alien_silhouette_v2.svg" alt="Alien." />
       </div>
     </div>
-    <HomeContent />
-  </div>
+    <AboutSection />
+    <ProjectsSection />
+  </main>
 </template>
 
 <script>
-import HomeContent from '../components/HomeContent.vue';
+import AboutSection from '../components/AboutSection.vue';
+import ProjectsSection from '../components/ProjectsSection.vue';
 
 export default {
   name: 'Home',
   components: {
-    HomeContent,
+    AboutSection,
+    ProjectsSection,
   },
   methods: {
     moveEyes(event) {
@@ -70,7 +73,7 @@ export default {
     width: 100%;
     height: 62vh;
     padding: 0 10%;
-    background-image: url('../assets/images/hero_bg2.jpg');
+    background-image: url('../assets/images/hero_bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
