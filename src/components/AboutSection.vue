@@ -1,6 +1,6 @@
 <template>
   <section class="about-section">
-    <div class="left-content">
+    <div class="about-left">
       <p class="about-me">About me</p>
       <p class="bio">
         I am a <strong>passionate</strong> frontend web developer that has grown
@@ -21,9 +21,9 @@
         <img class="vue-logo" src="../assets/images/vue.png" alt="Vue logo." />
       </div>
     </div>
-    <div class="right-content">
+    <div class="about-right">
       <p class="skills-tools">Skills/Tools</p>
-      <div class="container">
+      <div class="skills-container">
         <div class="skills">
           <p>Programming Skills</p>
           <ul>
@@ -74,12 +74,12 @@ export default {
   justify-content: space-between;
   width: 75vw;
   height: 100%;
-  margin: -5% auto 150px auto;
+  margin: -5% auto 100px auto;
   z-index: 3;
   box-shadow: 10px 5px 5px $primary-dark;
   background-color: $white;
   border-radius: 7px;
-  .left-content {
+  .about-left {
     text-align: left;
     background-color: $primary;
     width: 40%;
@@ -104,14 +104,13 @@ export default {
       .react-logo {
         width: 20vmin;
         animation: rotateReact 15s infinite linear;
-        filter: drop-shadow(0 0 0.75rem #04ffff);
+        filter: drop-shadow(0 0 0.75rem $primary-light);
       }
     }
   }
-  .right-content {
+  .about-right {
     width: 60%;
     background-color: $white;
-    border: 1px solid #eee;
     border-radius: 7px;
     border-start-start-radius: 0;
     border-end-start-radius: 0;
@@ -121,7 +120,7 @@ export default {
       font-size: 2.3rem;
       font-weight: 500;
     }
-    .container {
+    .skills-container {
       display: flex;
       justify-content: space-around;
       p {

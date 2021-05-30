@@ -31,18 +31,21 @@
     </div>
     <AboutSection />
     <ProjectsSection />
+    <WhySection />
   </main>
 </template>
 
 <script>
 import AboutSection from '../components/AboutSection.vue';
 import ProjectsSection from '../components/ProjectsSection.vue';
+import WhySection from '../components/WhySection.vue';
 
 export default {
   name: 'Home',
   components: {
     AboutSection,
     ProjectsSection,
+    WhySection,
   },
   methods: {
     moveEyes(event) {
@@ -77,6 +80,7 @@ export default {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     overflow: hidden;
     &::after {
       content: '';
