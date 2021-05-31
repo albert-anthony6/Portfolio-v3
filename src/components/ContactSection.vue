@@ -79,7 +79,12 @@ export default {
           ...this.form,
         }),
       })
-        .then(() => console.log('Successfully sent'))
+        .then(() => {
+          this.form.name = '';
+          this.form.email = '';
+          this.form.subject = '';
+          this.form.message = '';
+        })
         .catch((error) => console.log(error));
     },
   },
