@@ -13,7 +13,7 @@
         placeholder="Message"
       />
       <div data-netlify-recaptcha="true"></div>
-      <input type="submit" value="Send Message" />
+      <input type="submit" name="submit" value="Send Message" />
     </form>
   </section>
 </template>
