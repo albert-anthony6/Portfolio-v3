@@ -1,7 +1,17 @@
 <template>
-  <section class="contact">
+  <section class="contact-form">
     <h1>Contact Info</h1>
-    <form name="contact" action="POST" data-netlify="true">
+    <form
+      name="contact"
+      method="POST"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+    >
+      <p class="hidden">
+        <label
+          >Dont' fill this out if you're a human: <input name="bot-field"
+        /></label>
+      </p>
       <input type="text" name="name" id="name" placeholder="Name" />
       <input type="email" name="email" id="email" placeholder="Email" />
       <input type="text" name="subject" id="subject" placeholder="Subject" />
@@ -12,8 +22,7 @@
         rows="10"
         placeholder="Message"
       />
-      <div data-netlify-recaptcha="true"></div>
-      <input type="submit" name="submit" value="Send Message" />
+      <button type="submit">Send Message</button>
     </form>
   </section>
 </template>
@@ -25,7 +34,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.contact {
+.contact-form {
   position: relative;
   background-color: $white;
   color: $primary-dark;
@@ -34,6 +43,9 @@ export default {
   margin: 0 auto;
   z-index: 2;
   border-radius: 7px;
+  .hidden {
+    display: none;
+  }
   h1 {
     font-size: 4.4rem;
     font-weight: 500;

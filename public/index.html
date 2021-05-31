@@ -23,7 +23,36 @@
         enabled. Please enable it to continue.</strong
       >
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <form
+        name="contact"
+        method="POST"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        hidden
+      >
+        <p class="hidden">
+          <label
+            >Dont' fill this out if you're a human: <input name="bot-field"
+          /></label>
+        </p>
+        <p>
+          <label>Name: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Subject: <input type="text" name="subject" /></label>
+        </p>
+        <p>
+          <label>Email: <input type="text" name="email" /></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>
