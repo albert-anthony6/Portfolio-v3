@@ -1,7 +1,7 @@
 <template>
   <section class="contact">
     <h1>Contact Info</h1>
-    <!-- <form name="contact" action="POST" data-netlify="true">
+    <form name="contact" action="POST" data-netlify="true">
       <input type="text" name="name" id="name" placeholder="Name" />
       <input type="email" name="email" id="email" placeholder="Email" />
       <input type="text" name="subject" id="subject" placeholder="Subject" />
@@ -14,29 +14,6 @@
       />
       <div data-netlify-recaptcha="true"></div>
       <input type="submit" name="submit" value="Send Message" />
-    </form> -->
-    <form name="contact" method="POST" data-netlify="true">
-      <p>
-        <label>Your Name: <input type="text" name="name" /></label>
-      </p>
-      <p>
-        <label>Your Email: <input type="email" name="email" /></label>
-      </p>
-      <p>
-        <label
-          >Your Role:
-          <select name="role[]" multiple>
-            <option value="leader">Leader</option>
-            <option value="follower">Follower</option>
-          </select></label
-        >
-      </p>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
     </form>
   </section>
 </template>
