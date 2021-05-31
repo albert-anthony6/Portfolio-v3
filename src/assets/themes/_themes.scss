@@ -27,6 +27,21 @@ a {
   text-decoration: none;
   color: #fff;
 }
+input {
+  height: 4rem;
+}
+input,
+textarea {
+  display: block;
+  margin-top: 15px;
+  border: 1px solid #003983;
+  border-radius: 7px;
+  padding: 0 10px;
+  outline: none;
+  width: 100%;
+  resize: none;
+  font-size: 1.6rem;
+}
 button {
   outline: none;
   border: 1px solid #003983;

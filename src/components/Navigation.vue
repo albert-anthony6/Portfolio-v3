@@ -1,5 +1,5 @@
 <template>
-  <div ref="navigation" class="navigation">
+  <nav ref="navigation" class="navigation">
     <input @click="toggleShrink" ref="active" type="checkbox" id="active" />
     <div class="wrapper">
       <label for="active" class="menu-button">
@@ -15,7 +15,7 @@
         <li @click="hideMenu"><a href="#">Contact</a></li>
       </ul>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>

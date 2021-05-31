@@ -1,6 +1,6 @@
 <template>
   <main class="home">
-    <div @mousemove="moveEyes" class="hero-section">
+    <header @mousemove="moveEyes" class="hero-section">
       <div class="hero-left">
         <p><span class="hello">Hello</span>, I'm</p>
         <h1>Albert Valdes</h1>
@@ -28,7 +28,7 @@
         </div>
         <img src="../assets/icons/alien_silhouette_v2.svg" alt="Alien." />
       </div>
-    </div>
+    </header>
     <AboutSection />
     <ProjectsSection />
     <WhySection />
