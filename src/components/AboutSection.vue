@@ -52,7 +52,10 @@
             <li>&check; Adobe XD</li>
             <li>&check; Figma</li>
             <li>&check; Airbnb Style Guide</li>
+            <li>&check; Communication</li>
             <li>&check; 24G</li>
+            <li>&check; Google</li>
+            <li>&check; Stack Overflow</li>
             <li>&check; Problem Solver</li>
           </ul>
         </div>

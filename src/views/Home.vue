@@ -32,6 +32,7 @@
     <AboutSection />
     <ProjectsSection />
     <WhySection />
+    <ContactSection />
   </main>
 </template>
 
@@ -39,6 +40,7 @@
 import AboutSection from '../components/AboutSection.vue';
 import ProjectsSection from '../components/ProjectsSection.vue';
 import WhySection from '../components/WhySection.vue';
+import ContactSection from '../components/ContactSection.vue';
 
 export default {
   name: 'Home',
@@ -46,6 +48,7 @@ export default {
     AboutSection,
     ProjectsSection,
     WhySection,
+    ContactSection,
   },
   methods: {
     moveEyes(event) {

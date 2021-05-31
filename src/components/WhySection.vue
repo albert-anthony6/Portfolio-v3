@@ -3,7 +3,7 @@
     <h1>Why work with me?</h1>
     <div class="cards-container">
       <div class="card">
-        <i class="fa fa-envelope" />
+        <i class="fa fa-hourglass-start" />
         <h2>Time Managment</h2>
         <p>
           I am able to manage tickets from their severity. I am able to track
@@ -13,7 +13,7 @@
         </p>
       </div>
       <div class="card">
-        <i class="fa fa-envelope" />
+        <i class="fa fa-search" />
         <h2>Attention to Detail</h2>
         <p>
           I am careful to get design details down correctly or revise until it's
@@ -23,7 +23,7 @@
         </p>
       </div>
       <div class="card">
-        <i class="fa fa-envelope" />
+        <i class="fa fa-leanpub" />
         <h2>Adaptable</h2>
         <p>
           Always excited to learn about new things. One of the most valuable
@@ -42,11 +42,27 @@ export default {};
 
 <style scoped lang="scss">
 .why {
+  position: relative;
   width: 100%;
   background-color: $primary-dark;
+  background-image: url('../assets/images/hero_bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   -webkit-transform: skewY(-7deg);
   transform: skewY(-7deg);
   padding: 15rem 0 20rem 0;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00398390;
+    background-image: linear-gradient(to bottom right, #00398390, #00000090);
+    z-index: -1;
+  }
   & > * {
     -webkit-transform: skewY(7deg);
     transform: skewY(7deg);
