@@ -32,7 +32,7 @@
     <AboutSection />
     <ProjectsSection />
     <WhySection />
-    <ContactSection />
+    <ContactSection v-on:contactMessage="handleMessage($event)" />
   </main>
 </template>
 
@@ -62,6 +62,9 @@ export default {
       this.$refs.ball2.style.left = x;
       this.$refs.ball2.style.top = y;
       this.$refs.ball2.style.transform = `transform(-${x}, -${y})`;
+    },
+    handleMessage(status) {
+      this.$emit('handleMessage', status);
     },
   },
 };

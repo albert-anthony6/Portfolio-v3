@@ -1,17 +1,35 @@
 <template>
   <div class="app">
     <Navigation />
-    <router-view />
+    <Modal v-on:hideModal="hideModal" :status="status" v-if="showModal" />
+    <router-view v-on:handleMessage="handleModal($event)" />
   </div>
 </template>
 
 <script>
 import Navigation from './components/Navigation.vue';
+import Modal from './components/Modal.vue';
 
 export default {
   name: 'App',
+  data() {
+    return {
+      showModal: false,
+      status: 'success',
+    };
+  },
   components: {
     Navigation,
+    Modal,
+  },
+  methods: {
+    hideModal() {
+      this.showModal = false;
+    },
+    handleModal(status) {
+      this.status = status;
+      this.showModal = true;
+    },
   },
 };
 </script>

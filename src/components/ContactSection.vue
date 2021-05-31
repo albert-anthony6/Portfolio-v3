@@ -104,8 +104,18 @@ export default {
           this.form.email = '';
           this.form.subject = '';
           this.form.message = '';
+          this.contactMessage('success');
         })
-        .catch((error) => console.log(error));
+        .catch(() => {
+          this.form.name = '';
+          this.form.email = '';
+          this.form.subject = '';
+          this.form.message = '';
+          this.contactMessage('fail');
+        });
+    },
+    contactMessage(status) {
+      this.$emit('contactMessage', status);
     },
   },
 };
