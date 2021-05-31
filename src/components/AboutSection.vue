@@ -56,6 +56,7 @@
             <li>&check; 24G</li>
             <li>&check; Google</li>
             <li>&check; Stack Overflow</li>
+            <li>&check; Documentation</li>
             <li>&check; Problem Solver</li>
           </ul>
         </div>
