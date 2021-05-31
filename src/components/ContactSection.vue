@@ -1,10 +1,10 @@
 <template>
   <section class="contact">
     <h1>Contact Info</h1>
-    <form action="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Name" />
-      <input type="email" name="email" placeholder="Email" />
-      <input type="text" name="subject" placeholder="Subject" />
+    <form name="contact" action="POST" data-netlify="true">
+      <input type="text" name="name" id="name" placeholder="Name" />
+      <input type="email" name="email" id="email" placeholder="Email" />
+      <input type="text" name="subject" id="subject" placeholder="Subject" />
       <textarea
         name="message"
         id="message"
@@ -12,8 +12,8 @@
         rows="10"
         placeholder="Message"
       />
-      <div data-netlify-recaptcha="true" />
-      <input type="submit" />
+      <div data-netlify-recaptcha="true"></div>
+      <input type="submit" value="Send Message" />
     </form>
   </section>
 </template>
