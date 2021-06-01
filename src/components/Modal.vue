@@ -56,7 +56,7 @@ export default {
 .modal-container {
   .modal-background {
     position: fixed;
-    background-color: #33333360;
+    background-color: #33333395;
     width: 100vw;
     height: 100vh;
     z-index: 1000;

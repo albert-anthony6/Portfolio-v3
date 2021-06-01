@@ -110,15 +110,15 @@ export default {
       .fa-github {
         background-color: $primary;
         font-size: 2.4rem;
-        padding: 10px;
+        padding: 1rem;
         border-radius: 50%;
         cursor: pointer;
         color: #fff;
       }
       .fa-linkedin,
       .fa-github {
-        padding: 10px 12px;
-        margin-left: 5px;
+        padding: 1rem 1.2rem;
+        margin-left: 0.5rem;
       }
       span {
         font-family: $pattaya;
