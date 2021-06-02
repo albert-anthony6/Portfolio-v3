@@ -161,6 +161,7 @@ export default {
       }
       .download-resume {
         background-color: $primary-dark;
+        border: 1px solid $primary-dark;
         color: $white;
         padding-top: 1rem;
         padding-bottom: 1rem;

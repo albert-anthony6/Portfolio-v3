@@ -80,20 +80,25 @@ export default {
     justify-content: space-around;
     align-items: flex-end;
     width: 100%;
-    height: 62vh;
+    min-height: 62vh;
     padding: 0 10%;
     background-image: url('../assets/images/hero_bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     overflow: hidden;
+    @media screen and (min-width: 1000px) {
+      background-attachment: fixed;
+    }
+    @include mdh {
+      min-height: 62vmax;
+    }
     &::after {
       content: '';
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: #00000081;
+      background-color: hsla(0, 0%, 0%, 0.506);
       border-radius: 7px;
       z-index: 1;
     }
@@ -102,8 +107,9 @@ export default {
       margin: auto 0;
       z-index: 2;
       @include mdh {
+        // height: 330px;
         text-align: center;
-        z-index: 999;
+        z-index: 998;
       }
       .fa-envelope,
       .fa-linkedin,
@@ -113,7 +119,7 @@ export default {
         padding: 1rem;
         border-radius: 50%;
         cursor: pointer;
-        color: #fff;
+        color: hsl(0, 0%, 100%);
       }
       .fa-linkedin,
       .fa-github {
@@ -124,6 +130,9 @@ export default {
         font-family: $pattaya;
         font-size: 3.5rem;
         color: $primary;
+        @include sm {
+          font-size: 3rem;
+        }
       }
       p,
       .hello,
@@ -131,6 +140,9 @@ export default {
         font-size: 5.2rem;
         @include xxl {
           font-size: 4rem;
+        }
+        @include sm {
+          font-size: 3.5rem;
         }
       }
       h2 {
@@ -150,6 +162,13 @@ export default {
         @include xl {
           font-size: 5rem;
           margin-bottom: -12px;
+        }
+        @include sm {
+          font-size: 4rem;
+        }
+        @include xxs {
+          line-height: 1;
+          margin: 0 0 10px 0;
         }
       }
     }
@@ -178,8 +197,8 @@ export default {
         top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: #ffffff73;
-        color: #000;
+        background-color: hsla(0, 0%, 100%, 0.451);
+        color: hsl(0, 0%, 0%);
         padding: 0px;
         border-radius: 50%;
         font-weight: 700;
@@ -190,7 +209,7 @@ export default {
           display: none;
         }
         &:hover {
-          background-color: #fff;
+          background-color: hsl(0, 0%, 100%);
         }
       }
       .eyes {
@@ -208,7 +227,7 @@ export default {
           position: relative;
           width: 100%;
           height: 100%;
-          background-color: #fff;
+          background-color: hsl(0, 0%, 100%);
           display: inline-block;
           margin: 10px;
           border-radius: 50%;
@@ -219,9 +238,9 @@ export default {
             transform: translate(-50%, -50%);
             width: 27%;
             height: 52%;
-            background-color: #000;
+            background-color: hsl(0, 0%, 0%);
             border-radius: 50%;
-            border: 5px solid #333;
+            border: 5px solid hsl(0, 0%, 20%);
           }
         }
       }

@@ -59,8 +59,12 @@ export default {};
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #00398390;
-    background-image: linear-gradient(to bottom right, #00398390, #00000090);
+    background-color: hsla(214, 100%, 26%, 0.565);
+    background-image: linear-gradient(
+      to bottom right,
+      hsla(214, 100%, 26%, 0.565),
+      hsla(0, 0%, 0%, 0.565)
+    );
     z-index: -1;
   }
   & > * {
