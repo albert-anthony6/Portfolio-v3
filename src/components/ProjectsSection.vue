@@ -5,12 +5,14 @@
       <div class="projects-left">
         <h2>Take a look at my latest work</h2>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore unde
-          odio vitae quod omnis corrupti odit voluptatem accusamus veniam harum.
+          Check out some of my work by going to my projects page or by clicking
+          one of the images here! Feedback and construsctive criticism is always
+          welcome.
         </p>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore unde
-          odio vitae quod omnis corrupti odit voluptatem accusamus veniam harum.
+          This portfolio was created using the Vue JavaScript library with Vue
+          Router. The projects showcased in my portfolio are a mix of Vue and
+          React projects and are my latest personal projects.
         </p>
         <button>Projects</button>
       </div>
@@ -46,7 +48,10 @@ export default {
   width: 75vw;
   margin: 0 auto;
   color: $primary-dark;
-  margin-bottom: 150px;
+  margin-bottom: 15rem;
+  @include sm {
+    margin-bottom: 10rem;
+  }
   h1 {
     font-size: 4.4rem;
   }
@@ -55,27 +60,80 @@ export default {
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
+    padding-bottom: 4rem;
+    @include mdh {
+      flex-direction: column;
+    }
+    @include sm {
+      padding-bottom: 0;
+    }
     .projects-left {
       text-align: left;
       width: 40%;
       padding: 0 2%;
+      @include xxl {
+        width: 50%;
+      }
+      @include mdh {
+        width: 100%;
+        button {
+          background-color: $primary;
+          border-color: $primary;
+          color: $white;
+        }
+      }
+      @include sm {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        button {
+          display: block;
+          width: 100%;
+        }
+      }
       h2 {
         margin-bottom: 10px;
         font-size: 2.4rem;
       }
       p {
         margin-bottom: 20px;
+        @include mdh {
+          width: calc(45ch, 50%, 75ch);
+        }
       }
     }
     .projects-right {
       width: 50%;
       position: relative;
+      padding-bottom: 4rem;
+      @include mdh {
+        width: 100%;
+      }
+      @include sm {
+        width: 100%;
+        padding-bottom: 0;
+      }
       img {
         position: absolute;
         width: 40%;
         outline: 10px solid transparent;
         transition: all 0.2s;
         z-index: 4;
+        @include xxl {
+          width: 50%;
+        }
+        @include mdh {
+          width: 30%;
+        }
+        @include tab {
+          width: 35%;
+        }
+        @include sm {
+          position: static;
+          width: 100%;
+          margin-top: 15px;
+          outline: none !important;
+          transform: none !important;
+        }
         &:hover {
           transform: scale(1.05);
           outline-offset: 20px;
@@ -86,14 +144,51 @@ export default {
       .project-1 {
         top: -10rem;
         left: 5rem;
+        @include xxl {
+          top: -12rem;
+          left: 7rem;
+        }
+        @include mdh {
+          top: 2.5rem;
+          left: 19%;
+          bottom: 0;
+        }
+        @include tab {
+          top: 5rem;
+          left: 15%;
+        }
       }
       .project-2 {
         top: -7rem;
         left: 27rem;
+        @include xxl {
+          top: -9rem;
+          left: 24rem;
+        }
+        @include mdh {
+          top: 2.5rem;
+          left: 55%;
+          bottom: 0;
+        }
+        @include tab {
+          top: 5rem;
+        }
       }
       .project-3 {
         top: 0rem;
         left: 16rem;
+        @include xxl {
+          top: -2rem;
+          left: 14rem;
+        }
+        @include mdh {
+          top: 1.2rem;
+          left: 35%;
+          bottom: 0;
+        }
+        @include tab {
+          top: 3.5rem;
+        }
       }
     }
   }

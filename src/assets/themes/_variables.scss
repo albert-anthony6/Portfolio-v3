@@ -42,7 +42,7 @@ $pattaya: 'Pattaya', Avenir, Helvetica, Arial, sans-serif;
 }
 
 @mixin mdh {
-  @media (max-width: 1000px) {
+  @media (max-width: 1025px) {
     @content;
   }
 }

@@ -64,3 +64,9 @@ button:hover {
   border-bottom: 1px solid hsl(0, 0%, 100%);
   cursor: pointer;
 }
+
+@media screen and (min-width: 2150px) {
+  html {
+    font-size: 80%;
+  }
+}
