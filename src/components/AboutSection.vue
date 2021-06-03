@@ -110,9 +110,6 @@ export default {
         @include tab {
           align-items: center;
         }
-        p {
-          width: calc(45ch, 50%, 75ch);
-        }
         .logos {
           flex-direction: column;
           justify-content: space-between;

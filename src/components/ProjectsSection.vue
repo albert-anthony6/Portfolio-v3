@@ -96,9 +96,6 @@ export default {
       }
       p {
         margin-bottom: 20px;
-        @include mdh {
-          width: calc(45ch, 50%, 75ch);
-        }
       }
     }
     .projects-right {
