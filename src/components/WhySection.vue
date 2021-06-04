@@ -52,6 +52,9 @@ export default {};
   -webkit-transform: skewY(-7deg);
   transform: skewY(-7deg);
   padding: 15rem 0 20rem 0;
+  @include mdh {
+    padding: 10rem 0;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -78,15 +81,33 @@ export default {};
   .cards-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    padding: 0 2.5rem;
+    @include mdh {
+      flex-direction: column;
+      align-items: center;
+    }
     .card {
-      // width: 15%;
-      width: 285px;
+      max-width: 285px;
       padding: 40px 15px;
       background-color: $primary;
       border-radius: 7px;
       box-shadow: 0 0 10px #000;
       transition: all 0.2s;
+      @media screen and (min-width: 2150px) {
+        max-width: 380px;
+      }
+      @include mdh {
+        transform: none !important;
+        width: 60%;
+        max-width: 100%;
+        &:nth-child(2) {
+          margin: 25px 0 !important;
+        }
+      }
+      @include sm-tab {
+        width: 100%;
+      }
       &:nth-child(2) {
         margin: 0 50px;
       }

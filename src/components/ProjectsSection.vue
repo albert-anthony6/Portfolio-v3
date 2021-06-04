@@ -120,6 +120,7 @@ export default {
         }
         @include mdh {
           width: 30%;
+          outline: none !important;
         }
         @include tab {
           width: 35%;
@@ -128,7 +129,6 @@ export default {
           position: static;
           width: 100%;
           margin-top: 15px;
-          outline: none !important;
           transform: none !important;
         }
         &:hover {
