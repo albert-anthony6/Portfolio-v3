@@ -53,7 +53,10 @@ export default {};
   transform: skewY(-7deg);
   padding: 15rem 0 20rem 0;
   @include mdh {
-    padding: 10rem 0;
+    padding: 10rem 5rem;
+  }
+  @include sm {
+    padding: 10rem 2rem;
   }
   &:after {
     content: '';

@@ -103,6 +103,7 @@ export default {
       width: 100%;
       border-end-start-radius: 0;
       border-end-end-radius: 0;
+      padding: 4%;
       .bio-container {
         display: flex;
         justify-content: space-between;
@@ -136,6 +137,9 @@ export default {
           }
         }
       }
+    }
+    @include sm {
+      text-align: center;
     }
     .about-me {
       font-size: 2.3rem;

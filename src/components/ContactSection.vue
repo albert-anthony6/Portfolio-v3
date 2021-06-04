@@ -131,6 +131,9 @@ export default {
   margin: 0 auto;
   z-index: 2;
   border-radius: 7px;
+  @include mdh {
+    padding: 2%;
+  }
   .hidden {
     display: none;
   }
@@ -145,15 +148,31 @@ export default {
     align-items: flex-start;
     padding: 0 2% 2% 2%;
     text-align: left;
+    @include mdh {
+      flex-direction: column-reverse;
+    }
     .contact-left {
       width: 45%;
+      @include mdh {
+        width: 100%;
+        margin-bottom: 15px;
+      }
       .contact-btn {
         display: block;
         margin-top: 15px;
+        @include mdh {
+          background-color: $primary;
+          border-color: $primary;
+          color: $white;
+        }
       }
     }
     .contact-right {
       width: 45%;
+      @include mdh {
+        width: 100%;
+        margin-bottom: 15px;
+      }
       h2 {
         &:not(:first-of-type) {
           margin-top: 1rem;
