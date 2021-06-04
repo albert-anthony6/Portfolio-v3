@@ -32,6 +32,10 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 13vw;
+  @include sm {
+    flex-direction: column-reverse;
+    padding: 2rem 13vw;
+  }
   .linkedin-link,
   .github-link {
     background-color: $primary;
@@ -45,6 +49,10 @@ export default {
   }
   .footer-right {
     text-align: right;
+    @include sm {
+      text-align: center;
+      margin-bottom: 15px;
+    }
   }
 }
 </style>
