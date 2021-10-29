@@ -7,7 +7,9 @@
       </label>
       <ul class="menu">
         <li @click="hideMenu"><router-link to="/">Home</router-link></li>
-        <li @click="hideMenu"><a href="#">Projects</a></li>
+        <li @click="hideMenu">
+          <router-link to="/projects">Projects</router-link>
+        </li>
         <li @click="hideMenu">
           <router-link to="/about">About 24G</router-link>
         </li>
